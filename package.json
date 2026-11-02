@@ -1,0 +1,51 @@
+{
+  "name": "csv-schema-mapper",
+  "version": "0.1.0",
+  "description": "Map messy client CSV exports onto HubSpot, Shopify, and Xero schemas.",
+  "type": "module",
+  "license": "MIT",
+  "author": "csv-schema-mapper contributors",
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "csv-schema-mapper": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "schemas",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "keywords": [
+    "csv",
+    "schema",
+    "mapping",
+    "hubspot",
+    "shopify",
+    "xero",
+    "etl",
+    "cli"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && chmod +x dist/cli.js",
+    "prepare": "npm run build",
+    "test": "tsc -p tsconfig.json && tsc -p tsconfig.test.json && node --enable-source-maps --test --test-reporter spec dist-test/test/*.test.js"
+  },
+  "dependencies": {
+    "yaml": "^2.9.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2"
+  }
+}

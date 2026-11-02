@@ -1,0 +1,11 @@
+target: acme-leads
+auto: false
+required_from_target: true
+columns:
+  email:
+    source: E-mail
+    transform: [trim, lower]
+  full_name:
+    source: Name
+    transform: trim
+  score: Points

@@ -1,0 +1,18 @@
+target: shopify-customers
+auto: false
+required_from_target: true
+columns:
+  email:
+    source: Customer Email
+    transform: [trim, lower]
+  first_name:
+    source: Given Name
+    transform: trim
+  last_name:
+    source: Surname
+    transform: trim
+  company: Business
+  phone:
+    source: Cell
+    transform: phone_e164_loose
+  accepts_email_marketing: Marketing Opt In

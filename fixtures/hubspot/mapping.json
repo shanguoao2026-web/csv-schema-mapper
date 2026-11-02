@@ -1,0 +1,12 @@
+{
+  "target": "hubspot-contacts",
+  "auto": true,
+  "required_from_target": true,
+  "columns": {
+    "email": { "source": "Email Address", "transform": ["trim", "lower"] },
+    "firstname": { "source": "First", "transform": "trim" },
+    "lastname": { "source": "Last Name", "transform": "trim" },
+    "phone": { "source": "Tel", "transform": "phone_e164_loose" },
+    "createdate": { "source": "Created", "transform": "date_iso_loose" }
+  }
+}

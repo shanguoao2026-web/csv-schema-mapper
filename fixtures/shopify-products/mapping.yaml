@@ -1,0 +1,12 @@
+target: shopify-products
+auto: false
+required_from_target: true
+columns:
+  handle: Slug
+  title: Name
+  variant_price:
+    source: Price
+    transform: trim
+  status:
+    source: State
+    transform: lower

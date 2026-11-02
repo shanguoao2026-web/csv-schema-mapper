@@ -1,0 +1,86 @@
+id: hubspot-contacts
+name: HubSpot Contacts
+description: HubSpot CRM contact properties. Mapped CSV headers are internal property names.
+fields:
+  - id: email
+    header: email
+    label: Email
+    type: email
+    required: true
+    synonyms: [email address, e-mail, e-mail address, emailaddress, customer email, mail, work email]
+  - id: firstname
+    header: firstname
+    label: First Name
+    type: string
+    synonyms: [first name, first, given name, given, fname, forename]
+  - id: lastname
+    header: lastname
+    label: Last Name
+    type: string
+    synonyms: [last name, last, surname, family name, family, lname]
+  - id: phone
+    header: phone
+    label: Phone Number
+    type: phone
+    synonyms: [phone number, telephone, tel, office phone, business phone, direct phone]
+  - id: mobilephone
+    header: mobilephone
+    label: Mobile Phone Number
+    type: phone
+    synonyms: [mobile, mobile phone, mobile number, cell, cell phone, cell number]
+  - id: company
+    header: company
+    label: Company Name
+    type: string
+    synonyms: [company name, organization, organisation, org, business, employer, account name]
+  - id: website
+    header: website
+    label: Website URL
+    type: url
+    synonyms: [website url, web site, web, url, site, homepage]
+  - id: jobtitle
+    header: jobtitle
+    label: Job Title
+    type: string
+    synonyms: [job title, job, position, role, occupation]
+  - id: address
+    header: address
+    label: Street Address
+    type: string
+    synonyms: [street address, street, address1, address line 1, addr]
+  - id: city
+    header: city
+    label: City
+    type: string
+    synonyms: [town, city name, locality]
+  - id: state
+    header: state
+    label: State/Region
+    type: string
+    synonyms: [state region, province, region]
+  - id: zip
+    header: zip
+    label: Postal Code
+    type: string
+    synonyms: [zip code, postal code, postal, postcode, post code]
+  - id: country
+    header: country
+    label: Country/Region
+    type: string
+    synonyms: [country name, nation]
+  - id: lifecyclestage
+    header: lifecyclestage
+    label: Lifecycle Stage
+    type: enum
+    enum: [subscriber, lead, marketingqualifiedlead, salesqualifiedlead, opportunity, customer, evangelist, other]
+    synonyms: [lifecycle stage, lifecycle, life cycle]
+  - id: hs_lead_status
+    header: hs_lead_status
+    label: Lead Status
+    type: string
+    synonyms: [lead status, hs lead status]
+  - id: createdate
+    header: createdate
+    label: Create Date
+    type: date
+    synonyms: [create date, created, created at, created on, date created, timestamp]

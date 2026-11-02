@@ -1,0 +1,105 @@
+id: shopify-customers
+name: Shopify Customers
+description: Shopify customer CSV import columns. Output headers match the Shopify template.
+fields:
+  - id: first_name
+    header: First Name
+    label: First Name
+    type: string
+    synonyms: [firstname, first, given name, given, fname]
+  - id: last_name
+    header: Last Name
+    label: Last Name
+    type: string
+    synonyms: [lastname, last, surname, family name, family, lname]
+  - id: email
+    header: Email
+    label: Email
+    type: email
+    required: true
+    synonyms: [email address, e-mail, customer email, mail, emailaddress]
+  - id: accepts_email_marketing
+    header: Accepts Email Marketing
+    label: Accepts Email Marketing
+    type: boolean
+    synonyms: [email marketing, marketing opt in, accepts marketing, newsletter, subscribed]
+  - id: company
+    header: Company
+    label: Company
+    type: string
+    synonyms: [company name, organization, organisation, business, org]
+  - id: address1
+    header: Address1
+    label: Address1
+    type: string
+    synonyms: [address 1, street, street address, address line 1, address]
+  - id: address2
+    header: Address2
+    label: Address2
+    type: string
+    synonyms: [address 2, street 2, address line 2, apartment, apt]
+  - id: city
+    header: City
+    label: City
+    type: string
+    synonyms: [town, city name]
+  - id: province
+    header: Province
+    label: Province
+    type: string
+    synonyms: [state, region, state region]
+  - id: province_code
+    header: Province Code
+    label: Province Code
+    type: string
+    synonyms: [state code]
+  - id: country
+    header: Country
+    label: Country
+    type: string
+    synonyms: [country name, nation]
+  - id: country_code
+    header: Country Code
+    label: Country Code
+    type: string
+    synonyms: [iso country, country iso]
+  - id: zip
+    header: Zip
+    label: Zip
+    type: string
+    synonyms: [zip code, postal code, postcode, post code, postal]
+  - id: phone
+    header: Phone
+    label: Phone
+    type: phone
+    synonyms: [phone number, telephone, tel, mobile, cell, cell phone]
+  - id: accepts_sms_marketing
+    header: Accepts SMS Marketing
+    label: Accepts SMS Marketing
+    type: boolean
+    synonyms: [sms marketing, accepts sms, sms opt in]
+  - id: total_spent
+    header: Total Spent
+    label: Total Spent
+    type: number
+    synonyms: [total spend, lifetime spend, amount spent]
+  - id: total_orders
+    header: Total Orders
+    label: Total Orders
+    type: integer
+    synonyms: [orders, order count]
+  - id: tags
+    header: Tags
+    label: Tags
+    type: string
+    synonyms: [tag, labels]
+  - id: note
+    header: Note
+    label: Note
+    type: string
+    synonyms: [notes, comment, comments]
+  - id: tax_exempt
+    header: Tax Exempt
+    label: Tax Exempt
+    type: boolean
+    synonyms: [tax free, tax exemption]

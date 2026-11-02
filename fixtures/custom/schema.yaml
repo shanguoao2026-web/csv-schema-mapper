@@ -1,0 +1,21 @@
+id: acme-leads
+name: Acme Leads
+description: Small custom target used by tests and the README.
+fields:
+  - id: email
+    header: Email
+    label: Email
+    type: email
+    required: true
+    synonyms: [email address, e-mail]
+  - id: full_name
+    header: Full Name
+    label: Full Name
+    type: string
+    required: true
+    synonyms: [name, full name]
+  - id: score
+    header: Score
+    label: Score
+    type: integer
+    synonyms: [lead score, points]

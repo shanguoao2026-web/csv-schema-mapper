@@ -1,0 +1,13 @@
+target: xero-contacts
+auto: false
+required_from_target: true
+columns:
+  contact_name: Org
+  email:
+    source: Mail
+    transform: lower
+  first_name: Given
+  last_name: Family
+  phone:
+    source: Office Phone
+    transform: phone_e164_loose

@@ -1,0 +1,117 @@
+id: shopify-products
+name: Shopify Products
+description: Core Shopify product CSV columns. Output headers match the Shopify product template.
+fields:
+  - id: handle
+    header: Handle
+    label: Handle
+    type: string
+    required: true
+    synonyms: [slug, url handle, product handle, url key]
+  - id: title
+    header: Title
+    label: Title
+    type: string
+    required: true
+    synonyms: [name, product name, product title]
+  - id: body_html
+    header: Body (HTML)
+    label: Body (HTML)
+    type: string
+    synonyms: [body html, body, description, html description, product description]
+  - id: vendor
+    header: Vendor
+    label: Vendor
+    type: string
+    synonyms: [brand, manufacturer]
+  - id: product_category
+    header: Product Category
+    label: Product Category
+    type: string
+    synonyms: [category, google product category]
+  - id: type
+    header: Type
+    label: Type
+    type: string
+    synonyms: [product type]
+  - id: tags
+    header: Tags
+    label: Tags
+    type: string
+    synonyms: [tag, labels]
+  - id: published
+    header: Published
+    label: Published
+    type: boolean
+    synonyms: [is published, publish]
+  - id: option1_name
+    header: Option1 Name
+    label: Option1 Name
+    type: string
+    synonyms: [option 1 name]
+  - id: option1_value
+    header: Option1 Value
+    label: Option1 Value
+    type: string
+    synonyms: [option 1 value]
+  - id: option2_name
+    header: Option2 Name
+    label: Option2 Name
+    type: string
+    synonyms: [option 2 name]
+  - id: option2_value
+    header: Option2 Value
+    label: Option2 Value
+    type: string
+    synonyms: [option 2 value]
+  - id: option3_name
+    header: Option3 Name
+    label: Option3 Name
+    type: string
+    synonyms: [option 3 name]
+  - id: option3_value
+    header: Option3 Value
+    label: Option3 Value
+    type: string
+    synonyms: [option 3 value]
+  - id: variant_sku
+    header: Variant SKU
+    label: Variant SKU
+    type: string
+    synonyms: [sku, item sku]
+  - id: variant_grams
+    header: Variant Grams
+    label: Variant Grams
+    type: integer
+    synonyms: [grams, weight grams]
+  - id: variant_inventory_qty
+    header: Variant Inventory Qty
+    label: Variant Inventory Qty
+    type: integer
+    synonyms: [inventory qty, inventory quantity, quantity, qty]
+  - id: variant_price
+    header: Variant Price
+    label: Variant Price
+    type: number
+    synonyms: [price, unit price]
+  - id: variant_compare_at_price
+    header: Variant Compare At Price
+    label: Variant Compare At Price
+    type: number
+    synonyms: [compare at price, compare price]
+  - id: variant_barcode
+    header: Variant Barcode
+    label: Variant Barcode
+    type: string
+    synonyms: [barcode, upc, ean]
+  - id: image_src
+    header: Image Src
+    label: Image Src
+    type: url
+    synonyms: [image, image url, image link, image source]
+  - id: status
+    header: Status
+    label: Status
+    type: enum
+    enum: [active, draft, archived]
+    synonyms: [state, product status]

@@ -1,0 +1,3 @@
+ContactName,AccountNumber,EmailAddress,FirstName,LastName,POAttentionTo,POAddressLine1,POAddressLine2,POCity,PORegion,POPostalCode,POCountry,PhoneNumber,MobileNumber,FaxNumber,TaxNumber,Website
+Acme,,billing@acme.example,Ann,Ng,,,,,,,,+64215550123,,,,
+,,bad,Bob,Ng,,,,,,,,123,,,,

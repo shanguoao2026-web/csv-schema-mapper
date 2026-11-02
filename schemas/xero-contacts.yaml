@@ -1,0 +1,90 @@
+id: xero-contacts
+name: Xero Contacts
+description: Common Xero contact import columns. Output headers match the Xero contact template.
+fields:
+  - id: contact_name
+    header: ContactName
+    label: Contact Name
+    type: string
+    required: true
+    synonyms: [contact name, name, company, company name, organization, organisation, org, business, account name, customer]
+  - id: account_number
+    header: AccountNumber
+    label: Account Number
+    type: string
+    synonyms: [account number, account no, account id, customer number]
+  - id: email
+    header: EmailAddress
+    label: Email Address
+    type: email
+    synonyms: [email, email address, e-mail, mail, emailaddress]
+  - id: first_name
+    header: FirstName
+    label: First Name
+    type: string
+    synonyms: [first name, firstname, first, given, given name, fname]
+  - id: last_name
+    header: LastName
+    label: Last Name
+    type: string
+    synonyms: [last name, lastname, last, surname, family, family name, lname]
+  - id: po_attention_to
+    header: POAttentionTo
+    label: PO Attention To
+    type: string
+    synonyms: [attention, attn, po attention]
+  - id: po_address_line1
+    header: POAddressLine1
+    label: PO Address Line 1
+    type: string
+    synonyms: [address, street, address line 1, street address, billing address, po address]
+  - id: po_address_line2
+    header: POAddressLine2
+    label: PO Address Line 2
+    type: string
+    synonyms: [address 2, address line 2, street 2]
+  - id: po_city
+    header: POCity
+    label: PO City
+    type: string
+    synonyms: [city, town]
+  - id: po_region
+    header: PORegion
+    label: PO Region
+    type: string
+    synonyms: [region, state, province]
+  - id: po_postal_code
+    header: POPostalCode
+    label: PO Postal Code
+    type: string
+    synonyms: [zip, zip code, postal code, postcode, post code, postal]
+  - id: po_country
+    header: POCountry
+    label: PO Country
+    type: string
+    synonyms: [country, country name, nation]
+  - id: phone
+    header: PhoneNumber
+    label: Phone Number
+    type: phone
+    synonyms: [phone, phone number, telephone, tel, office phone, business phone, direct phone]
+  - id: mobile
+    header: MobileNumber
+    label: Mobile Number
+    type: phone
+    synonyms: [mobile, mobile phone, mobile number, cell, cell phone]
+  - id: fax
+    header: FaxNumber
+    label: Fax Number
+    type: phone
+    synonyms: [fax, fax number, facsimile]
+  - id: tax_number
+    header: TaxNumber
+    label: Tax Number
+    type: string
+    synonyms: [tax number, tax id, vat, vat number, abn, ein]
+  - id: website
+    header: Website
+    label: Website
+    type: url
+    synonyms: [web, url, site, homepage]

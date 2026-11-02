@@ -1,0 +1,8 @@
+target: hubspot-contacts
+auto: true
+columns:
+  email: "Email Address"
+  firstname: { source: "First", transform: trim }
+  lastname: { source: "Last Name", transform: trim }
+transforms: trim | lower | upper | phone_e164_loose | date_iso_loose
+required_from_target: true

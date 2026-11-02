@@ -1,0 +1,4 @@
+Email Address,First,Last Name,Tel,Company Name,Web,Job,City Name,Created
+"  Ada@Example.com "," Ada "," Lovelace ","(415) 555-2671",Analytical Engines,https://ada.example,Mathematician,London,02/15/2024
+bad-email,Alan,Turing,555,Bletchley,not a url,Cryptanalyst,Bletchley Park,2024-13-40
+,Grace,Hopper,+1 703 555 0100,Navy,www.grace.example,Admiral,Arlington,Jan 1 2020

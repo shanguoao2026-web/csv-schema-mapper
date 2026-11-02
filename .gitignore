@@ -1,0 +1,12 @@
+node_modules/
+dist/
+dist-test/
+*.log
+*.tsbuildinfo
+.DS_Store
+coverage/
+tmp/
+out/
+.env
+.env.*
+grok-build.log

@@ -1,0 +1,4 @@
+email,firstname,lastname,phone,mobilephone,company,website,jobtitle,address,city,state,zip,country,lifecyclestage,hs_lead_status,createdate
+ada@example.com,Ada,Lovelace,+14155552671,,Analytical Engines,https://ada.example,Mathematician,,London,,,,,,2024-02-15
+bad-email,Alan,Turing,555,,Bletchley,not a url,Cryptanalyst,,Bletchley Park,,,,,,2024-13-40
+,Grace,Hopper,+17035550100,,Navy,www.grace.example,Admiral,,Arlington,,,,,,2020-01-01
