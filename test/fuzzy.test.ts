@@ -37,6 +37,19 @@ describe("fuzzy header matching", () => {
     assert.equal(normalize("first_name"), "first name");
   });
 
+  it("scores City / Town and related locality headers as city synonyms", () => {
+    const headers = ["City / Town", "City/Town", "Town/City", "Town", "Municipality", "Locality"];
+    for (const target of ["hubspot-contacts", "shopify-customers"] as const) {
+      const city = loadBuiltin(target).fields.find((item) => item.id === "city");
+      assert.ok(city, target);
+      for (const header of headers) {
+        const scored = scoreHeader(header, city);
+        assert.equal(scored.method, "synonym", `${target} ${header}`);
+        assert.ok(scored.score >= 0.9, `${target} ${header} scored ${scored.score}`);
+      }
+    }
+  });
+
   it("scores Email Address as a synonym of the HubSpot email field", () => {
     const email = loadBuiltin("hubspot-contacts").fields.find((item) => item.id === "email");
     assert.ok(email);

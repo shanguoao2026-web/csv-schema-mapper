@@ -52,7 +52,7 @@ fields:
     header: city
     label: City
     type: string
-    synonyms: [town, city name, locality]
+    synonyms: [town, city name, locality, municipality, city / town, city/town, town/city]
   - id: state
     header: state
     label: State/Region

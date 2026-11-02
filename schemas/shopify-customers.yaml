@@ -42,7 +42,7 @@ fields:
     header: City
     label: City
     type: string
-    synonyms: [town, city name]
+    synonyms: [town, city name, locality, municipality, city / town, city/town, town/city]
   - id: province
     header: Province
     label: Province

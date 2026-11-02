@@ -268,6 +268,35 @@ describe("map and validate", () => {
     assert.match(yaml, /mobilephone \(mobilephone\)/);
   });
 
+  it("auto-maps and suggests City / Town as a high-confidence city synonym", () => {
+    const csv = "Email Address,City / Town\nada@example.com,London\n";
+    for (const target of ["hubspot-contacts", "shopify-customers"] as const) {
+      const schema = loadBuiltin(target);
+      const result = mapCsvText(csv, schema, null);
+      const city = result.matches.find((match) => match.targetId === "city");
+      assert.equal(city?.sourceHeader, "City / Town", target);
+      assert.equal(city?.method, "synonym", target);
+      assert.ok((city?.confidence ?? 0) >= 0.9, `${target} confidence ${city?.confidence}`);
+      const cityIndex = schema.fields.findIndex((field) => field.id === "city");
+      assert.equal(result.rows[0]?.[cityIndex], "London");
+      assert.equal(
+        result.issues.some((issue) => issue.code === "low_confidence" && issue.field === "city"),
+        false,
+      );
+
+      const parsed = parseCsv(csv);
+      const yaml = suggestMappingYaml({
+        headers: parsed.headers,
+        rowCount: parsed.rows.length,
+        schema,
+        config: null,
+      });
+      const doc = parseYaml(yaml) as { columns: Record<string, { source: string }> };
+      assert.equal(doc.columns.city?.source, "City / Town", target);
+      assert.match(yaml, /source: "City \/ Town" # synonym (?:0\.9\d|1\.00)/);
+    }
+  });
+
   it("suggests Shopify customer headers from a messy export", () => {
     const schema = loadBuiltin("shopify-customers");
     const parsed = parseCsv(readFixture("shopify-customers", "messy.csv"));
